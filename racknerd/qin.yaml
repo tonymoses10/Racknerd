@@ -86,7 +86,7 @@ dns:
 
 proxies:
   - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":443,"cipher":"auto","uuid":"a5dc505f-e2a4-4bca-e924-e80f4ba6992d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a5dc505f","headers":{"host":"www.tonymoses.xyz"}}}
-  - {"name":"美国 ws","type":"vmess","server":"www.tonymoses.xyz","port":555,"cipher":"auto","uuid":"5f5e8dbd-b240-47d2-b37c-8d8457c2157f","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/5f5e8dbd"}}
+  - {"name":"美国 ws","type":"vmess","server":"www.tonymoses.xyz","port":556,"cipher":"auto","uuid":"69dda1f4-7303-4802-e156-37b0ad867612","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/69dda1f4"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -96,4 +96,3 @@ proxy-groups:
       - 美国 ws+tls
       - 美国 ws
       
-
