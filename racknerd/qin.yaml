@@ -85,8 +85,8 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":443,"cipher":"auto","uuid":"a5dc505f-e2a4-4bca-e924-e80f4ba6992d","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a5dc505f","headers":{"host":"www.tonymoses.xyz"}}}
-  - {"name":"美国 ws","type":"vmess","server":"www.tonymoses.xyz","port":556,"cipher":"auto","uuid":"69dda1f4-7303-4802-e156-37b0ad867612","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/69dda1f4"}}
+  - {"name":"美国 ws","type":"vmess","server":"www.tonymoses.xyz","port":38000,"cipher":"auto","uuid":"a20a0b5c-865f-474a-d21a-df1989f6ec07","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a20a0b5c"}}
+  - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":30611,"cipher":"auto","uuid":"14cfcf07-aa92-4491-c810-3a127fd6730c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/14cfcf07","headers":{"host":"www.tonymoses.xyz"}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
