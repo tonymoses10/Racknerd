@@ -85,7 +85,7 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"美国 ws","type":"vmess","server":"www.tonymoses.xyz","port":38000,"cipher":"auto","uuid":"a20a0b5c-865f-474a-d21a-df1989f6ec07","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a20a0b5c"}}
+  - {"name":"美国 ws","type":"vmess","server":"www.tonymoses.xyz","port":38001,"cipher":"auto","uuid":"a20a0b5c-865f-474a-d21a-df1989f6ec07","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a20a0b5c"}}
   - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":443,"cipher":"auto","uuid":"14cfcf07-aa92-4491-c810-3a127fd6730c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/14cfcf07","headers":{"host":"www.tonymoses.xyz"}}}
 proxy-groups:
   - name: 🚀 节点选择
