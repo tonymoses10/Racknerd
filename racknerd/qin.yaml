@@ -3,7 +3,7 @@
 # 客户端：Clash
 # 创建时间：2024-04-14 21:18:55
 # 使用模版：V2RaySE 默认模版
-# 节点数量：1
+# 节点数量：3
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -85,9 +85,9 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"美国 ws-1","type":"vmess","server":"www.tonymoses.xyz","port":38001,"cipher":"auto","uuid":"a20a0b5c-865f-474a-d21a-df1989f6ec07","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a20a0b5c"}}
-  - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":443,"cipher":"auto","uuid":"14cfcf07-aa92-4491-c810-3a127fd6730c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/14cfcf07","headers":{"host":"www.tonymoses.xyz"}}}
-  - {"name":"美国 ws-2","type":"vmess","server":"www.tonymoses.xyz","port":38000,"cipher":"auto","uuid":"9279a43e-de69-404b-e165-0d5f7a745d4e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/9279a43e"}}
+  - {"name":"美国 ws-1","type":"vmess","server":"www.tonymoses.xyz","port":37999,"cipher":"auto","uuid":"a20a0b5c-865f-474a-d21a-df1989f6ec07","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a20a0b5c"}}
+  - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":440,"cipher":"auto","uuid":"14cfcf07-aa92-4491-c810-3a127fd6730c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/14cfcf07","headers":{"host":"www.tonymoses.xyz"}}}
+  - {"name":"美国 ws-2","type":"vmess","server":"www.tonymoses.xyz","port":37998,"cipher":"auto","uuid":"9279a43e-de69-404b-e165-0d5f7a745d4e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/9279a43e"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
