@@ -85,16 +85,18 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"美国 ws-1","type":"vmess","server":"www.tonymoses.xyz","port":37999,"cipher":"auto","uuid":"a20a0b5c-865f-474a-d21a-df1989f6ec07","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/a20a0b5c"}}
-  - {"name":"美国 ws+tls","type":"vmess","server":"www.tonymoses.xyz","port":440,"cipher":"auto","uuid":"14cfcf07-aa92-4491-c810-3a127fd6730c","alterId":0,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/14cfcf07","headers":{"host":"www.tonymoses.xyz"}}}
-  - {"name":"美国 ws-2","type":"vmess","server":"www.tonymoses.xyz","port":37998,"cipher":"auto","uuid":"9279a43e-de69-404b-e165-0d5f7a745d4e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/9279a43e"}}
+  - {"name":"美国 vision","type":"vless","server":"tonymoses.xyz","port":37999,"uuid":"6a1c06b6-47d2-47fb-af5d-a7dd7a26be10","tls":true,"servername":"tonymoses.xyz","flow":"xtls-rprx-vision","network":"tcp","client-fingerprint":"chrome"}
+  - {"name":"美国 ws+tls","type":"vless","server":"www.tonymoses.xyz","port":440,"uuid":"8ac171b2-3d26-42cd-c3b2-bc4ee8766887","tls":true,"servername":"www.tonymoses.xyz","network":"ws","ws-opts":{"path":"/8ac171b2","headers":{"host":"www.tonymoses.xyz"}},"client-fingerprint":"chrome"}
+  - {"name":"美国 reality","type":"vless","server":"www.tonymoses.xyz","port":37998,"udp":true,"uuid":"ebbf4a05-85c1-4e3d-8716-861ddf4a93d1","tls":true,"servername":"icloud.cdn-apple.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4"},"client-fingerprint":"chrome"}
+  - {"name":"美国 ws","type":"vless","server":"www.tonymoses.xyz","port":37997,"uuid":"7edf4564-238b-4e15-f979-49e5e20b59bc","tls":false,"network":"ws","ws-opts":{"path":"/7edf4564"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - 美国 ws-1
+      - 美国 vision
       - 美国 ws+tls
-      - 美国 ws-2
+      - 美国 reality
+      - 美国 ws
       - DIRECT
       
