@@ -1,95 +1,60 @@
-mixed-port: 7890
-allow-lan: true
-log-level: info
-external-controller: 0.0.0.0:9090
-dns:
-  enabled: true
-  listen: 0.0.0.0:1053
-  ipv6: true
-  default-nameserver:
-    - 223.5.5.5
-    - 114.114.114.114
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter:
-    - '*.lan'
-    - '*.linksys.com'
-    - '*.linksyssmartwifi.com'
-    - swscan.apple.com
-    - mesu.apple.com
-    - '*.msftconnecttest.com'
-    - '*.msftncsi.com'
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - '*.time.edu.cn'
-    - '*.ntp.org.cn'
-    - +.pool.ntp.org
-    - time1.cloud.tencent.com
-    - +.music.163.com
-    - '*.126.net'
-    - musicapi.taihe.com
-    - music.taihe.com
-    - songsearch.kugou.com
-    - trackercdn.kugou.com
-    - '*.kuwo.cn'
-    - api-jooxtt.sanook.com
-    - api.joox.com
-    - joox.com
-    - +.y.qq.com
-    - +.music.tc.qq.com
-    - aqqmusic.tc.qq.com
-    - +.stream.qqmusic.qq.com
-    - '*.xiami.com'
-    - +.music.migu.cn
-    - +.srv.nintendo.net
-    - +.stun.playstation.net
-    - xbox.*.microsoft.com
-    - +.xboxlive.com
-    - localhost.ptlogin2.qq.com
-    - proxy.golang.org
-    - stun.*.*
-    - stun.*.*.*
-    - '*.mcdn.bilivideo.cn'
-  nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  fallback-filter:
-    geoip: false
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-
 proxies:
-  - {"name":"美国 vision","type":"vless","server":"tonymoses.xyz","port":37999,"uuid":"6a1c06b6-47d2-47fb-af5d-a7dd7a26be10","tls":true,"servername":"tonymoses.xyz","flow":"xtls-rprx-vision","network":"tcp","client-fingerprint":"chrome"}
-  - {"name":"美国 ws+tls","type":"vless","server":"www.tonymoses.xyz","port":440,"uuid":"8ac171b2-3d26-42cd-c3b2-bc4ee8766887","tls":true,"servername":"www.tonymoses.xyz","network":"ws","ws-opts":{"path":"/8ac171b2","headers":{"host":"www.tonymoses.xyz"}},"client-fingerprint":"chrome"}
-  - {"name":"美国 reality","type":"vless","server":"www.tonymoses.xyz","port":37997,"udp":true,"uuid":"ebbf4a05-85c1-4e3d-8716-861ddf4a93d1","tls":true,"servername":"www.icloud.com","flow":"xtls-rprx-vision","network":"tcp","reality-opts":{"public-key":"S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4"},"client-fingerprint":"chrome"}
-  - {"name":"美国 ws","type":"vless","server":"www.tonymoses.xyz","port":37996,"uuid":"7edf4564-238b-4e15-f979-49e5e20b59bc","tls":false,"network":"ws","ws-opts":{"path":"/7edf4564"}}
+  - name: 美国 vision
+    port: 37999
+    server: tonymoses.xyz
+    type: vless
+    network: tcp
+    tls: true
+    udp: true
+    servername: tonymoses.xyz
+    skip-cert-verify: true
+    uuid: 6a1c06b6-47d2-47fb-af5d-a7dd7a26be10
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+  - name: 美国 ws+tls
+    port: 440
+    server: www.tonymoses.xyz
+    type: vless
+    network: ws
+    tls: true
+    udp: true
+    servername: www.tonymoses.xyz
+    skip-cert-verify: true
+    ws-opts:
+      path: /8ac171b2
+      headers:
+        host: www.tonymoses.xyz
+    uuid: 8ac171b2-3d26-42cd-c3b2-bc4ee8766887
+    client-fingerprint: chrome
+  - name: 美国 reality
+    port: 37997
+    server: www.tonymoses.xyz
+    type: vless
+    network: tcp
+    udp: true
+    servername: www.icloud.com
+    skip-cert-verify: true
+    reality-opts:
+      public-key: S-g0oP36DShii1uPOnZDSEhp_wQghX6h68PgMivOmD4
+    uuid: ebbf4a05-85c1-4e3d-8716-861ddf4a93d1
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+  - name: 美国 ws
+    port: 37996
+    server: www.tonymoses.xyz
+    type: vless
+    network: ws
+    udp: true
+    skip-cert-verify: true
+    ws-opts:
+      path: /7edf4564
+    uuid: 7edf4564-238b-4e15-f979-49e5e20b59bc
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
+      - 美国 reality
       - 美国 vision
       - 美国 ws+tls
-      - 美国 reality
       - 美国 ws
       - DIRECT
-      
