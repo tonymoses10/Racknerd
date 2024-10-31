@@ -1,7 +1,7 @@
 proxies:
   - name: 美国 vision
     port: 37999
-    server: 142.171.89.151
+    server: tonymoses.xyz
     type: vless
     network: tcp
     tls: true
@@ -13,7 +13,7 @@ proxies:
     client-fingerprint: chrome
   - name: 美国 ws+tls
     port: 440
-    server: 142.171.89.151
+    server: www.tonymoses.xyz
     type: vless
     network: ws
     tls: true
@@ -28,7 +28,7 @@ proxies:
     client-fingerprint: chrome
   - name: 美国 reality
     port: 37997
-    server: 142.171.89.151
+    server: www.tonymoses.xyz
     type: vless
     network: tcp
     udp: true
@@ -41,7 +41,7 @@ proxies:
     client-fingerprint: chrome
   - name: 美国 ws
     port: 37996
-    server: 142.171.89.151
+    server: www.tonymoses.xyz
     type: vless
     network: ws
     udp: true
